@@ -1,0 +1,449 @@
+local MM2Script = Instance.new("ScreenGui")
+local Background = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Scripts = Instance.new("ScrollingFrame")
+local ESP = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Description = Instance.new("TextLabel")
+local Name = Instance.new("TextLabel")
+local Speed = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Description_2 = Instance.new("TextLabel")
+local Name_2 = Instance.new("TextLabel")
+local Fly = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local Description_3 = Instance.new("TextLabel")
+local Name_3 = Instance.new("TextLabel")
+local FarmBalls = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local Description_4 = Instance.new("TextLabel")
+local Name_4 = Instance.new("TextLabel")
+local End = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local FarmCoins = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Frame_5 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local Description_5 = Instance.new("TextLabel")
+local Name_5 = Instance.new("TextLabel")
+local Name_6 = Instance.new("TextLabel")
+
+MM2Script.Name = "MM2Script"
+MM2Script.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MM2Script.ResetOnSpawn = false
+
+Background.Name = "Background"
+Background.Parent = MM2Script
+Background.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Background.BorderSizePixel = 0
+Background.Position = UDim2.new(0.406466991, 0, 0.32390362, 0)
+Background.Size = UDim2.new(0, 238, 0, 281)
+
+UICorner.Parent = Background
+
+Scripts.Name = "Scripts"
+Scripts.Parent = Background
+Scripts.Active = true
+Scripts.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+Scripts.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scripts.BorderSizePixel = 0
+Scripts.Position = UDim2.new(0.0294117648, 0, 0.131672591, 0)
+Scripts.Size = UDim2.new(0, 223, 0, 236)
+
+ESP.Name = "ESP"
+ESP.Parent = Scripts
+ESP.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+ESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESP.BorderSizePixel = 0
+ESP.Position = UDim2.new(0.681614339, 0, 0.01549327, 0)
+ESP.Size = UDim2.new(0, 50, 0, 43)
+ESP.Font = Enum.Font.Arcade
+ESP.Text = "Выполнить"
+ESP.TextColor3 = Color3.fromRGB(175, 175, 175)
+ESP.TextSize = 14.000
+ESP.TextWrapped = true
+
+UICorner_2.Parent = ESP
+
+Frame.Parent = ESP
+Frame.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Frame.Size = UDim2.new(0, 138, 0, 43)
+
+UICorner_3.Parent = Frame
+
+Description.Name = "Description"
+Description.Parent = ESP
+Description.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Description.BackgroundTransparency = 1.000
+Description.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Description.BorderSizePixel = 0
+Description.Position = UDim2.new(-2.88000011, 0, 0.441860467, 0)
+Description.Size = UDim2.new(0, 138, 0, 24)
+Description.Font = Enum.Font.Arcade
+Description.Text = "Позволяет узнать кто мардер, шериф"
+Description.TextColor3 = Color3.fromRGB(161, 161, 161)
+Description.TextScaled = true
+Description.TextSize = 14.000
+Description.TextWrapped = true
+
+Name.Name = "Name"
+Name.Parent = ESP
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Name.Size = UDim2.new(0, 138, 0, 19)
+Name.Font = Enum.Font.Arcade
+Name.Text = "ESP Роли"
+Name.TextColor3 = Color3.fromRGB(161, 161, 161)
+Name.TextSize = 14.000
+
+Speed.Name = "Speed"
+Speed.Parent = Scripts
+Speed.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Speed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0.681614339, 0, 0.104461245, 0)
+Speed.Size = UDim2.new(0, 50, 0, 43)
+Speed.Font = Enum.Font.Arcade
+Speed.Text = "Выполнить"
+Speed.TextColor3 = Color3.fromRGB(175, 175, 175)
+Speed.TextSize = 14.000
+Speed.TextWrapped = true
+
+UICorner_4.Parent = Speed
+
+Frame_2.Parent = Speed
+Frame_2.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Frame_2.Size = UDim2.new(0, 138, 0, 43)
+
+UICorner_5.Parent = Frame_2
+
+Description_2.Name = "Description"
+Description_2.Parent = Speed
+Description_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Description_2.BackgroundTransparency = 1.000
+Description_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Description_2.BorderSizePixel = 0
+Description_2.Position = UDim2.new(-2.88000011, 0, 0.441860467, 0)
+Description_2.Size = UDim2.new(0, 138, 0, 24)
+Description_2.Font = Enum.Font.Arcade
+Description_2.Text = "Позволяет повысить скорость игрока"
+Description_2.TextColor3 = Color3.fromRGB(161, 161, 161)
+Description_2.TextScaled = true
+Description_2.TextSize = 14.000
+Description_2.TextWrapped = true
+
+Name_2.Name = "Name"
+Name_2.Parent = Speed
+Name_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.BackgroundTransparency = 1.000
+Name_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_2.BorderSizePixel = 0
+Name_2.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Name_2.Size = UDim2.new(0, 138, 0, 19)
+Name_2.Font = Enum.Font.Arcade
+Name_2.Text = "Больше скорость"
+Name_2.TextColor3 = Color3.fromRGB(161, 161, 161)
+Name_2.TextSize = 14.000
+
+Fly.Name = "Fly"
+Fly.Parent = Scripts
+Fly.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.681614339, 0, 0.193429202, 0)
+Fly.Size = UDim2.new(0, 50, 0, 43)
+Fly.Font = Enum.Font.Arcade
+Fly.Text = "Выполнить"
+Fly.TextColor3 = Color3.fromRGB(175, 175, 175)
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+
+UICorner_6.Parent = Fly
+
+Frame_3.Parent = Fly
+Frame_3.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Frame_3.Size = UDim2.new(0, 138, 0, 43)
+
+UICorner_7.Parent = Frame_3
+
+Description_3.Name = "Description"
+Description_3.Parent = Fly
+Description_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Description_3.BackgroundTransparency = 1.000
+Description_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Description_3.BorderSizePixel = 0
+Description_3.Position = UDim2.new(-2.88000011, 0, 0.441860467, 0)
+Description_3.Size = UDim2.new(0, 138, 0, 24)
+Description_3.Font = Enum.Font.Arcade
+Description_3.Text = "Позволяет вам летать"
+Description_3.TextColor3 = Color3.fromRGB(161, 161, 161)
+Description_3.TextScaled = true
+Description_3.TextSize = 14.000
+Description_3.TextWrapped = true
+
+Name_3.Name = "Name"
+Name_3.Parent = Fly
+Name_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_3.BackgroundTransparency = 1.000
+Name_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_3.BorderSizePixel = 0
+Name_3.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Name_3.Size = UDim2.new(0, 138, 0, 19)
+Name_3.Font = Enum.Font.Arcade
+Name_3.Text = "Флай"
+Name_3.TextColor3 = Color3.fromRGB(161, 161, 161)
+Name_3.TextSize = 14.000
+
+FarmBalls.Name = "FarmBalls"
+FarmBalls.Parent = Scripts
+FarmBalls.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+FarmBalls.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FarmBalls.BorderSizePixel = 0
+FarmBalls.Position = UDim2.new(0.681614339, 0, 0.369585782, 0)
+FarmBalls.Size = UDim2.new(0, 50, 0, 43)
+FarmBalls.Font = Enum.Font.Arcade
+FarmBalls.Text = "Выполнить"
+FarmBalls.TextColor3 = Color3.fromRGB(175, 175, 175)
+FarmBalls.TextSize = 14.000
+FarmBalls.TextWrapped = true
+
+UICorner_8.Parent = FarmBalls
+
+Frame_4.Parent = FarmBalls
+Frame_4.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Frame_4.Size = UDim2.new(0, 138, 0, 43)
+
+UICorner_9.Parent = Frame_4
+
+Description_4.Name = "Description"
+Description_4.Parent = FarmBalls
+Description_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Description_4.BackgroundTransparency = 1.000
+Description_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Description_4.BorderSizePixel = 0
+Description_4.Position = UDim2.new(-2.88000011, 0, 0.441860467, 0)
+Description_4.Size = UDim2.new(0, 138, 0, 24)
+Description_4.Font = Enum.Font.Arcade
+Description_4.Text = "Позволяет фармить мячи"
+Description_4.TextColor3 = Color3.fromRGB(161, 161, 161)
+Description_4.TextScaled = true
+Description_4.TextSize = 14.000
+Description_4.TextWrapped = true
+
+Name_4.Name = "Name"
+Name_4.Parent = FarmBalls
+Name_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_4.BackgroundTransparency = 1.000
+Name_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_4.BorderSizePixel = 0
+Name_4.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Name_4.Size = UDim2.new(0, 138, 0, 19)
+Name_4.Font = Enum.Font.Arcade
+Name_4.Text = "Фарм мяч"
+Name_4.TextColor3 = Color3.fromRGB(161, 161, 161)
+Name_4.TextSize = 14.000
+
+End.Name = "End"
+End.Parent = Scripts
+End.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+End.BorderColor3 = Color3.fromRGB(0, 0, 0)
+End.BorderSizePixel = 0
+End.Position = UDim2.new(0.0358744413, 0, 0.457244605, 0)
+End.Size = UDim2.new(0, 199, 0, 62)
+
+UICorner_10.Parent = End
+
+TextLabel.Parent = End
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 199, 0, 62)
+TextLabel.Font = Enum.Font.Arcade
+TextLabel.Text = "Больше нет. Если хотите больше добавить, попросите Назара."
+TextLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+FarmCoins.Name = "FarmCoins"
+FarmCoins.Parent = Scripts
+FarmCoins.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+FarmCoins.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FarmCoins.BorderSizePixel = 0
+FarmCoins.Position = UDim2.new(0.681614339, 0, 0.282397181, 0)
+FarmCoins.Size = UDim2.new(0, 50, 0, 43)
+FarmCoins.Font = Enum.Font.Arcade
+FarmCoins.Text = "Выполнить"
+FarmCoins.TextColor3 = Color3.fromRGB(175, 175, 175)
+FarmCoins.TextSize = 14.000
+FarmCoins.TextWrapped = true
+
+UICorner_11.Parent = FarmCoins
+
+Frame_5.Parent = FarmCoins
+Frame_5.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Frame_5.Size = UDim2.new(0, 138, 0, 43)
+
+UICorner_12.Parent = Frame_5
+
+Description_5.Name = "Description"
+Description_5.Parent = FarmCoins
+Description_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Description_5.BackgroundTransparency = 1.000
+Description_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Description_5.BorderSizePixel = 0
+Description_5.Position = UDim2.new(-2.88000011, 0, 0.441860467, 0)
+Description_5.Size = UDim2.new(0, 138, 0, 24)
+Description_5.Font = Enum.Font.Arcade
+Description_5.Text = "Позволяет фармить монеты"
+Description_5.TextColor3 = Color3.fromRGB(161, 161, 161)
+Description_5.TextScaled = true
+Description_5.TextSize = 14.000
+Description_5.TextWrapped = true
+
+Name_5.Name = "Name"
+Name_5.Parent = FarmCoins
+Name_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_5.BackgroundTransparency = 1.000
+Name_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_5.BorderSizePixel = 0
+Name_5.Position = UDim2.new(-2.88000011, 0, 0, 0)
+Name_5.Size = UDim2.new(0, 138, 0, 19)
+Name_5.Font = Enum.Font.Arcade
+Name_5.Text = "Фарм монеты"
+Name_5.TextColor3 = Color3.fromRGB(161, 161, 161)
+Name_5.TextSize = 14.000
+
+Name_6.Name = "Name"
+Name_6.Parent = Background
+Name_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_6.BackgroundTransparency = 1.000
+Name_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_6.BorderSizePixel = 0
+Name_6.Position = UDim2.new(0.0294117648, 0, 0, 0)
+Name_6.Size = UDim2.new(0, 223, 0, 37)
+Name_6.Font = Enum.Font.Arcade
+Name_6.Text = "Скрипты на ММ2"
+Name_6.TextColor3 = Color3.fromRGB(189, 189, 189)
+Name_6.TextScaled = true
+Name_6.TextSize = 14.000
+Name_6.TextWrapped = true
+
+local function UMHJUJ_fake_script()
+	local script = Instance.new('LocalScript', ESP)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "Выполнено!";
+			Text = "Скрипт запущен.";
+			Icon = "0"})
+		Duration = 3;
+		wait(0.1)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Melishy/MM2Esp/main/MurderMystery2HighlightESP"))(' Watermelon ?')
+	end)
+end
+coroutine.wrap(UMHJUJ_fake_script)()
+local function NLIU_fake_script()
+	local script = Instance.new('LocalScript', Speed)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "Выполнено!";
+			Text = "Скрипт запущен.";
+			Icon = "0"})
+		Duration = 3;
+		while true do
+			local speed = 21
+			local player = game.Players.LocalPlayer
+			local character = player.Character
+			character.Humanoid.WalkSpeed = speed
+		end
+	end)
+end
+coroutine.wrap(NLIU_fake_script)()
+local function WTLNHJ_fake_script()
+	local script = Instance.new('LocalScript', Fly)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "Выполнено!";
+			Text = "Скрипт запущен.";
+			Icon = "0"})
+		Duration = 3;
+		wait(0.1)
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Melishy/ScriptsByMelishy/main/FlyByMelishy.lua'),true))()
+	end)
+end
+coroutine.wrap(WTLNHJ_fake_script)()
+local function YHPHGYU_fake_script()
+	local script = Instance.new('LocalScript', FarmBalls)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "Выполнено!";
+			Text = "Скрипт запущен.";
+			Icon = "0"})
+		Duration = 3;
+		wait(0.1)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0mm"))()
+	end)
+end
+coroutine.wrap(YHPHGYU_fake_script)()
+local function VACIE_fake_script()
+	local script = Instance.new('LocalScript', FarmCoins)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("StarterGui"):SetCore("SendNotification", { 
+			Title = "К сожалению";
+			Text = "Скрипт не найден. Назар ищет, и будет доступно.";
+			Icon = "0"})
+		Duration = 3;
+	end)
+end
+coroutine.wrap(VACIE_fake_script)()
+local function IKTFDIY_fake_script()
+	local script = Instance.new('LocalScript', Background)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(IKTFDIY_fake_script)()
+local function OZMNR_fake_script()
+	local script = Instance.new('LocalScript', Background)
+
+	game:GetService("StarterGui"):SetCore("SendNotification", { 
+		Title = "Йо!";
+		Text = "Русский скрипт создано в тг: @melishy";
+		Icon = "0"})
+	Duration = 5;
+end
+coroutine.wrap(OZMNR_fake_script)()
