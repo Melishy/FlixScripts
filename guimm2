@@ -36,9 +36,12 @@ local UICorner_12 = Instance.new("UICorner")
 local Description_5 = Instance.new("TextLabel")
 local Name_5 = Instance.new("TextLabel")
 local Name_6 = Instance.new("TextLabel")
+local Toggle = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
 
 MM2Script.Name = "MM2Script"
 MM2Script.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MM2Script.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 MM2Script.ResetOnSpawn = false
 
 Background.Name = "Background"
@@ -46,7 +49,7 @@ Background.Parent = MM2Script
 Background.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
 Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Background.BorderSizePixel = 0
-Background.Position = UDim2.new(0.406466991, 0, 0.32390362, 0)
+Background.Position = UDim2.new(0.364772737, 0, 0.216867462, 0)
 Background.Size = UDim2.new(0, 238, 0, 281)
 
 UICorner.Parent = Background
@@ -358,7 +361,23 @@ Name_6.TextScaled = true
 Name_6.TextSize = 14.000
 Name_6.TextWrapped = true
 
-local function UMHJUJ_fake_script()
+Toggle.Name = "Toggle"
+Toggle.Parent = MM2Script
+Toggle.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Toggle.BorderSizePixel = 0
+Toggle.Position = UDim2.new(0.0909091085, 0, 0.146586344, 0)
+Toggle.Size = UDim2.new(0, 60, 0, 35)
+Toggle.Font = Enum.Font.Arcade
+Toggle.Text = "Закрыть"
+Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.TextScaled = true
+Toggle.TextSize = 9.000
+Toggle.TextWrapped = true
+
+UICorner_13.Parent = Toggle
+
+local function KKIIEN_fake_script()
 	local script = Instance.new('LocalScript', ESP)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -371,26 +390,47 @@ local function UMHJUJ_fake_script()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Melishy/MM2Esp/main/MurderMystery2HighlightESP"))(' Watermelon ?')
 	end)
 end
-coroutine.wrap(UMHJUJ_fake_script)()
-local function NLIU_fake_script()
+coroutine.wrap(KKIIEN_fake_script)()
+local function FRPHODP_fake_script()
 	local script = Instance.new('LocalScript', Speed)
 
-	script.Parent.MouseButton1Click:Connect(function()
-		game:GetService("StarterGui"):SetCore("SendNotification", { 
-			Title = "Выполнено!";
-			Text = "Скрипт запущен.";
-			Icon = "0"})
-		Duration = 3;
-		while true do
-			local speed = 21
-			local player = game.Players.LocalPlayer
-			local character = player.Character
+	local button = script.Parent
+	local isLooping = false
+	
+	local function setWalkSpeedTo21()
+		local speed = 21
+		local player = game.Players.LocalPlayer
+		local character = player.Character
+	
+		if character then
 			character.Humanoid.WalkSpeed = speed
 		end
+	end
+	
+	local function onButtonClicked()
+		if not isLooping then
+			game:GetService("StarterGui"):SetCore("SendNotification", {
+				Title = "Выполнено!";
+				Text = "Скрипт запущен.";
+				Icon = "0";
+			})
+	
+			isLooping = true
+			while isLooping do
+				setWalkSpeedTo21()
+				wait(0.1)
+			end
+		end
+	end
+	
+	button.MouseButton1Click:Connect(onButtonClicked)
+	
+	game.Players.PlayerAdded:Connect(function(player)
+		player.CharacterAdded:Connect(setWalkSpeedTo21)
 	end)
 end
-coroutine.wrap(NLIU_fake_script)()
-local function WTLNHJ_fake_script()
+coroutine.wrap(FRPHODP_fake_script)()
+local function GTSONLS_fake_script() 
 	local script = Instance.new('LocalScript', Fly)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -403,8 +443,8 @@ local function WTLNHJ_fake_script()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Melishy/ScriptsByMelishy/main/FlyByMelishy.lua'),true))()
 	end)
 end
-coroutine.wrap(WTLNHJ_fake_script)()
-local function YHPHGYU_fake_script()
+coroutine.wrap(GTSONLS_fake_script)()
+local function FNHKGB_fake_script()
 	local script = Instance.new('LocalScript', FarmBalls)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -417,8 +457,8 @@ local function YHPHGYU_fake_script()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0mm"))()
 	end)
 end
-coroutine.wrap(YHPHGYU_fake_script)()
-local function VACIE_fake_script()
+coroutine.wrap(FNHKGB_fake_script)()
+local function MCWG_fake_script() 
 	local script = Instance.new('LocalScript', FarmCoins)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -429,21 +469,45 @@ local function VACIE_fake_script()
 		Duration = 3;
 	end)
 end
-coroutine.wrap(VACIE_fake_script)()
-local function IKTFDIY_fake_script()
+coroutine.wrap(MCWG_fake_script)()
+local function LAVZBYU_fake_script()
 	local script = Instance.new('LocalScript', Background)
 
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 end
-coroutine.wrap(IKTFDIY_fake_script)()
-local function OZMNR_fake_script()
-	local script = Instance.new('LocalScript', Background)
+coroutine.wrap(LAVZBYU_fake_script)()
+local function QRRW_fake_script()
+	local script = Instance.new('LocalScript', MM2Script)
 
 	game:GetService("StarterGui"):SetCore("SendNotification", { 
 		Title = "Йо!";
 		Text = "Русский скрипт создано в тг: @melishy";
-		Icon = "0"})
+		Icon = "rbxasseid://8369892614"})
 	Duration = 5;
 end
-coroutine.wrap(OZMNR_fake_script)()
+coroutine.wrap(QRRW_fake_script)()
+local function DCFQVJI_fake_script()
+	local script = Instance.new('LocalScript', Toggle)
+
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+	
+end
+coroutine.wrap(DCFQVJI_fake_script)()
+local function RALKBOA_fake_script()
+	local script = Instance.new('LocalScript', Toggle)
+
+	local gui = script.Parent.Parent.Background
+	local btn = script.Parent
+	
+	local function toggleGui()
+		gui.Visible = not gui.Visible
+		btn.Text = gui.Visible and "Закрыть" or "Открыть"
+	end
+	
+	btn.MouseButton1Click:Connect(toggleGui)
+	
+	btn.Text = gui.Visible and "Закрыть" or "Открыть"
+end
+coroutine.wrap(RALKBOA_fake_script)()
