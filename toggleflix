@@ -1,19 +1,18 @@
-local tgflix = game.Players.LocalPlayer.PlayerGui.ToggleGUIFlix
-
 local ToggleGUIFlix = Instance.new("ScreenGui")
 local Main = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
 local UIStroke = Instance.new("UIStroke")
 
 ToggleGUIFlix.Name = "ToggleGUIFlix"
-ToggleGUIFlix.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ToggleGUIFlix.Parent = game.Players.LocalPlayer.PlayerGui
 ToggleGUIFlix.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ToggleGUIFlix.ResetOnSpawn = false
 
 Main.Name = "Main"
-Main.Parent = game.StarterGui.ToggleGUIFlix
+Main.Parent = ToggleGUIFlix
 Main.Active = true
 Main.Draggable = true
+Main.Visible = false
 Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
@@ -31,7 +30,7 @@ UIStroke.Transparency = 0.5
 
 UIStroke.Parent = Main
 
-local script = Instance.new('LocalScript', Main)
+local lscript = Instance.new('LocalScript', Main)
 script.Parent.MouseButton1Click:Connect(function()
 	getfenv().keytoclick = "K"
 	local vim = game:service("VirtualInputManager")
