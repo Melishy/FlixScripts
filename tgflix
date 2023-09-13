@@ -1,0 +1,402 @@
+local function mobFlix()
+	local ToggleGUIFlix = Instance.new("ScreenGui")
+	local Main = Instance.new("ImageButton")
+	local UICorner = Instance.new("UICorner")
+	local UIStroke = Instance.new("UIStroke")
+
+	ToggleGUIFlix.Name = "ToggleGUIFlix"
+	ToggleGUIFlix.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ToggleGUIFlix.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	ToggleGUIFlix.ResetOnSpawn = false
+
+	Main.Name = "Main"
+	Main.Parent = game.StarterGui.ToggleGUIFlix
+	Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Main.BorderSizePixel = 0
+	Main.Position = UDim2.new(0.0893054008, 0, 0.1626506, 0)
+	Main.Size = UDim2.new(0, 34, 0, 34)
+	Main.Image = "http://www.roblox.com/asset/?id=14637151749"
+
+	UICorner.Parent = Main
+
+	UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+	UIStroke.Color = Color3.fromRGB(33, 33, 33)
+	UIStroke.LineJoinMode = Enum.LineJoinMode.Round
+	UIStroke.Thickness = 2.164
+	UIStroke.Transparency = 0.5
+
+	UIStroke.Parent = Main
+
+	local function MXWWMC_fake_script()
+		local script = Instance.new('LocalScript', Main)
+
+		script.Parent.MouseButton1Click:Connect(function()
+			getfenv().keytoclick = "K"
+			local vim = game:service("VirtualInputManager")
+			vim:SendKeyEvent(true, keytoclick, false, game)
+		end)
+	end
+	coroutine.wrap(MXWWMC_fake_script)()
+end;
+
+mobFlix()
+
+wait(0.1)
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local tWindow = Rayfield:CreateWindow({
+	Name = "Flix | Тест",
+	LoadingTitle = "Тестирования скриптов Flix",
+	LoadingSubtitle = "by VeteranMelishy",
+	ConfigurationSaving = {
+		Enabled = false,
+		FolderName = nil,
+		FileName = "FlixTest"
+	},
+	Discord = {
+		Enabled = false,
+		Invite = "noinvitelink",
+		RememberJoins = true
+	},
+	KeySystem = true,
+	KeySettings = {
+		Title = "Flix Тестирование",
+		Subtitle = "Flix Testing Scripts",
+		Note = "Введите код для теста",
+		FileName = "FlixTestKey",
+		SaveKey = false,
+		GrabKeyFromSite = false,
+		Key = {"298313"}
+	}
+})
+
+local testTab = tWindow:CreateTab("Тестинг", 4483362458)
+local testpara = testTab:CreateParagraph({Title = "Flix Test", Content = "Вы зашли к тестированию скриптов Flix. Нажмите кнопки ниже чтобы запустить и тестировать!"})
+local Button = testTab:CreateButton({
+	Name = "Тестирование Flix | MM2",
+	Callback = function()
+
+		local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield', true))()
+		local Players = game:GetService("Players")
+		local lplr = Players.LocalPlayer
+		local Mouse = Players.LocalPlayer:GetMouse()
+		local speaker = Players.LocalPlayer
+	
+			function randomString()
+				local length = math.random(10,20)
+				local array = {}
+				for i = 1, length do
+					array[i] = string.char(math.random(32, 126))
+				end
+				return table.concat(array)
+			end
+
+			local Window = Rayfield:CreateWindow({
+				Name = "V3 Flix | MM2",
+				LoadingTitle = "Универсальные скрипты от Flix!",
+				LoadingSubtitle = "by VeteranMelishy",
+				ConfigurationSaving = {
+					Enabled = true,
+					FolderName = "Flix",
+					FileName = "FlixMM2"
+				},
+				Discord = {
+					Enabled = true,
+					Invite = "RAkVZg5HrM",
+					RememberJoins = true
+				},
+				KeySystem = true,
+				KeySettings = {
+					Title = "Flix | MM2",
+					Subtitle = "Flix Ключ",
+					Note = "dsc.gg/RAkVZg5HrM - получить ключ в Discord",
+					FileName = "KeyFlix",
+					SaveKey = true,
+					GrabKeyFromSite = true,
+					Key = "https://raw.githubusercontent.com/Melishy/FlixScripts/main/flixkey"
+				}
+			})
+
+			---------------[ Main ]---------------
+
+			local main = Window:CreateTab("Главная", 4370345144)
+
+			local mobilepara = main:CreateParagraph({Title = "Flix поддерживается мобильный устройств!", Content = "Теперь если ты пользуешься мобильный, мы добавили функцию для мобильных юзеров!"})
+			local mobbtn = main:CreateButton({
+				Name = "Включить мобильный режим",
+				Callback = function()
+					Rayfield:Notify({
+						Title = "Flix Mobile",
+						Content = "Вы можете переключить интерфейс!",
+						Duration = 5,
+						Image = 3944670656,
+						Actions = {
+							Ignore = {
+								Name = "Включить",
+								Callback = function()
+									local tgFlix = game.CoreGui.ToggleGUIFlix
+									tgFlix.Visible = true
+									Rayfield:Notify({
+										Title = "Выключить мобильный Flix?",
+										Content = "Если вы используете пк то можете выключить. Нажмиите K для переключения",
+										Duration = 5,
+										Image = 3944670656,
+										Actions = {
+											Ignore = {
+												Name = "Да",
+												Callback = function()
+													tgFlix.Visible = false
+												end,
+											},
+										},
+									})
+								end,
+							},
+						},
+					})
+				end,
+			})
+
+			local ScriptsTextSection = main:CreateSection("Скрипты")
+
+			local espbtn = main:CreateButton({
+				Name = "ESP Игроков",
+				Callback = function()
+					Rayfield:Notify({
+						Title = "ESP Игроков",
+						Content = "Видеть кто мардер, шериф и невинных",
+						Duration = 5,
+						Image = 3944670656,
+						Actions = {
+							Ignore = {
+								Name = "Выполнить",
+								Callback = function()
+									loadstring(game:HttpGet("https://raw.githubusercontent.com/Melishy/MM2Esp/main/MurderMystery2HighlightESP"))(' Watermelon ?')
+								end,
+							},
+						},
+					})
+				end,
+			})
+
+
+			local flybtn = main:CreateButton({
+				Name = "Флай",
+				Callback = function()
+					Rayfield:Notify({
+						Title = "Флай",
+						Content = "Летайте в любом времени!",
+						Duration = 5,
+						Image = 3944670656,
+						Actions = {
+							Ignore = {
+								Name = "Выполнить",
+								Callback = function()
+									loadstring(game:HttpGet("https://raw.githubusercontent.com/Melishy/FlixScripts/main/fly", true))()
+								end,
+							},
+						},
+					})
+				end,
+			})	
+
+			local gungrabbtn = main:CreateButton({
+				Name = "GunGrabber",
+				Callback = function()
+					Rayfield:Notify({
+						Title = "GunGrabber",
+						Content = "Взять пест когда шериф умер",
+						Duration = 5,
+						Image = 3944670656,
+						Actions = {
+							Ignore = {
+								Name = "Выполнить",
+								Callback = function()
+									local currentX = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X
+									local currentY = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y
+									local currentZ = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z	
+									if workspace:FindFirstChild("GunDrop") ~= nil then
+										Rayfield:Notify({
+											Title = "Flix | MM2",
+											Content = "Успешно взято пест!",
+											Duration = 2,
+											Image = 3944670656
+										})
+										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace:FindFirstChild("GunDrop").CFrame	
+										wait(.25)	
+										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(currentX, currentY, currentZ)
+									else
+										Rayfield:Notify({
+											Title = "Flix | MM2",
+											Content = "Шериф или герой не умер!",
+											Duration = 2,
+											Image = 3944670656
+										})
+									end	
+								end,
+							},
+						},
+					})
+				end,
+			})
+
+			local optoolsbtn = main:CreateButton({
+				Name = "ОП Инструменты",
+				Callback = function()
+					Rayfield:Notify({
+						Title = "ОП Инструменты",
+						Content = "После выполнении, вы получите оп инструменты!",
+						Duration = 5,
+						Image = 3944670656,
+						Actions = {
+							Ignore = {
+								Name = "Выполнить",
+								Callback = function()
+									loadstring(game:HttpGet("https://pastefy.app/VYIAk3o1/raw"))()
+								end,
+							},
+						},
+					})
+				end,
+			})
+
+			local tptoolbtn = main:CreateButton({
+				Name = "Инструменты телепортации",
+				Callback = function()
+					Rayfield:Notify({
+						Title = "TPTool",
+						Content = "После выполнении, вы получите инструмент телепортации!",
+						Duration = 5,
+						Image = 3944670656,
+						Actions = {
+							Ignore = {
+								Name = "Выполнить",
+								Callback = function()
+									local TpTool = Instance.new("Tool")
+									TpTool.Name = "Teleport Tool"
+									TpTool.RequiresHandle = false
+									TpTool.Parent = Players.LocalPlayer.Backpack
+									TpTool.Activated:Connect(function()
+										local speaker = Players.LocalPlayer
+										local Char = speaker.Character or workspace:FindFirstChild(speaker.Name)
+										local HRP = Char and Char:FindFirstChild("HumanoidRootPart")
+										if not Char or not HRP then
+											return error("Failed to find HumanoidRootPart")
+										end
+										HRP.CFrame = CFrame.new(Mouse.Hit.X, Mouse.Hit.Y + 3, Mouse.Hit.Z, select(4, HRP.CFrame:components()))
+									end)
+								end,
+							},
+						},
+					})
+				end,
+			})
+
+			local plrSection = main:CreateSection("Способность  игрока")
+
+			local speedslider = main:CreateSlider({
+				Name = "Скорость",
+				Range = {0, 100},
+				Increment = 1,
+				Suffix = "Скорость",
+				CurrentValue = 16,
+				Flag = "SpeedConfig", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+				Callback = function(Value)
+					game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+				end,
+			})
+
+			local jumpbslider = main:CreateSlider({
+				Name = "Сила прыжка",
+				Range = {0, 100},
+				Increment = 1,
+				Suffix = "Сила",
+				CurrentValue = 50,
+				Flag = "JumpBConfig",
+				Callback = function(Value)
+					game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+				end,
+			})
+
+			local Toggle = main:CreateToggle({
+				Name = "Ноу-клип",
+				CurrentValue = false,
+				Callback = function(Value)
+					local function NoclipLoop()
+						if Value == true and speaker.Character ~= nil then
+							for _, child in pairs(speaker.Character:GetDescendants()) do
+								floatName = randomString()
+								if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
+									child.CanCollide = false
+								end
+							end
+						elseif Value == false then	
+							for _, child in pairs(speaker.Character:GetDescendants()) do
+								if Noclipping then 
+									child.CanCollide = true
+								end		
+							end
+						end
+					end
+					Noclipping = NoclipLoop()
+				end,
+			})
+
+			---------------[ Settings ]---------------
+
+			local settingstab = Window:CreateTab("Настройки", 4431163567)
+			local userInfoSection = settingstab:CreateSection("Информаця о пользователя")
+			local userInfo = settingstab:CreateParagraph({Title = "Юзернейм: "..lplr.Name, Content = "Идентификатор: "..lplr.UserId})
+
+			local verSection = settingstab:CreateSection("Обновления")
+			local versionStatus = settingstab:CreateParagraph({Title = "Версия: 3", Content = "Последнее обновление: 12.09.2023"})
+
+
+			---------------[ Credits ]---------------
+
+			local credits = Window:CreateTab("Кредиты", 4384402413)
+			local DiscordServerSection = credits:CreateSection("Discord Сервер")
+			local DiscordServerBtn = credits:CreateButton({
+				Name = "Discord Сервер",
+				Callback = function()
+					Rayfield:Notify({
+						Title = "Discord Сервер",
+						Content = "https://dsc.gg/RAkVZg5HrM",
+						Duration = 5,
+						Image = 4503342956,
+						Actions = {
+							Ignore = {
+								Name = "Готово",
+								Callback = function()
+
+								end,
+							},
+						},
+					})
+				end,
+			})
+
+			local RobloxSection = credits:CreateSection("Roblox")
+			local DiscordServerBtn = credits:CreateButton({
+				Name = "Roblox Ник",
+				Callback = function()
+					Rayfield:Notify({
+						Title = "Roblox Ник",
+						Content = "lonbkill63411",
+						Duration = 5,
+						Image = 4503342956,
+						Actions = {
+							Ignore = {
+								Name = "Готово",
+								Callback = function()
+
+								end,
+							},
+						},
+					})
+				end,
+			})
+	end,
+})
