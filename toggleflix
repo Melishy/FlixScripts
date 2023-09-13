@@ -1,45 +1,39 @@
 local tgflix = game.Players.LocalPlayer.PlayerGui.ToggleGUIFlix
 
-local function mobFlix()
-	local ToggleGUIFlix = Instance.new("ScreenGui")
-	local Main = Instance.new("ImageButton")
-	local UICorner = Instance.new("UICorner")
-	local UIStroke = Instance.new("UIStroke")
+local ToggleGUIFlix = Instance.new("ScreenGui")
+local Main = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
 
-	ToggleGUIFlix.Name = "ToggleGUIFlix"
-	ToggleGUIFlix.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-	ToggleGUIFlix.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-	ToggleGUIFlix.ResetOnSpawn = false
+ToggleGUIFlix.Name = "ToggleGUIFlix"
+ToggleGUIFlix.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ToggleGUIFlix.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ToggleGUIFlix.ResetOnSpawn = false
 
-	Main.Name = "Main"
-	Main.Parent = game.StarterGui.ToggleGUIFlix
-	Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Main.BorderSizePixel = 0
-	Main.Position = UDim2.new(0.0893054008, 0, 0.1626506, 0)
-	Main.Size = UDim2.new(0, 34, 0, 34)
-	Main.Image = "http://www.roblox.com/asset/?id=14637151749"
+Main.Name = "Main"
+Main.Parent = game.StarterGui.ToggleGUIFlix
+Main.Active = true
+Main.Draggable = true
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.0893054008, 0, 0.1626506, 0)
+Main.Size = UDim2.new(0, 34, 0, 34)
+Main.Image = "http://www.roblox.com/asset/?id=14637151749"
 
-	UICorner.Parent = Main
+UICorner.Parent = Main
 
-	UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
-	UIStroke.Color = Color3.fromRGB(33, 33, 33)
-	UIStroke.LineJoinMode = Enum.LineJoinMode.Round
-	UIStroke.Thickness = 2.164
-	UIStroke.Transparency = 0.5
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Contextual
+UIStroke.Color = Color3.fromRGB(33, 33, 33)
+UIStroke.LineJoinMode = Enum.LineJoinMode.Round
+UIStroke.Thickness = 2.164
+UIStroke.Transparency = 0.5
 
-	UIStroke.Parent = Main
+UIStroke.Parent = Main
 
-	local function MXWWMC_fake_script()
-		local script = Instance.new('LocalScript', Main)
-
-		script.Parent.MouseButton1Click:Connect(function()
-			getfenv().keytoclick = "K"
-			local vim = game:service("VirtualInputManager")
-			vim:SendKeyEvent(true, keytoclick, false, game)
-		end)
-	end
-	coroutine.wrap(MXWWMC_fake_script)()
-end;
-
-mobFlix()
+local script = Instance.new('LocalScript', Main)
+script.Parent.MouseButton1Click:Connect(function()
+	getfenv().keytoclick = "K"
+	local vim = game:service("VirtualInputManager")
+	vim:SendKeyEvent(true, keytoclick, false, game)
+end)
