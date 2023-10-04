@@ -2,4 +2,6 @@ if game.PlaceId == 142823291 then -- MM2
   loadstring(game:HttpGet("https://raw.githubusercontent.com/Melishy/FlixScripts/main/mm2", true))()
 elseif game.PlaceId == 13772394625 or 14732610803 then -- Blade Ball
    loadstring(game:HttpGet("https://raw.githubusercontent.com/Melishy/FlixScripts/main/bladeball", true))()
+elseif game.PlaceId == 14787381917 or 14957017197 then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/Melishy/FlixScripts/main/flixwsdad", true))()
 end
