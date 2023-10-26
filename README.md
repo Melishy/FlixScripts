@@ -1,3 +1,3 @@
 # FlixScripts
 
-# xd, my own scripts, why not?
+xd, my own scripts, why not?
